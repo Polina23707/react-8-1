@@ -34,8 +34,12 @@
   height: 30px;
 }
 
+.loading {
+  margin-left: 10px;
+}
+
 .details-container {
-  margin-left: 50px;
+  margin-left: 100px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;

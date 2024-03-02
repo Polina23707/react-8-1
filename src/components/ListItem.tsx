@@ -1,13 +1,13 @@
-interface ListItemType {
+interface IListItem {
   id: number,
   name: string,
-  onClick: any,
+  onClick: (e: any) => void,
 }
 
-export default function ListItem({id, name, onClick}: ListItemType) {
+export default function ListItem({id, name, onClick}: IListItem) {
   return(
     <li className='user-item'>
-      <button className='user-item-btn'id={id.toString()} onClick={onClick}>{name}</button>
+      <button className='user-item-btn'id={String(id)} onClick={onClick}>{name}</button>
     </li>
   )
 }
