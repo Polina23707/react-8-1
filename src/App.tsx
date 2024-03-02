@@ -30,15 +30,15 @@ function App() {
     fetchList();
   }, []);
 
-  function onClick(e: any) {
-    e.preventDefault();
-    setId(e.target.id);
+  function onClick(event: React.MouseEvent<HTMLButtonElement>) {
+    event.preventDefault();
+    setId(event.target.id);
   }
 
   return (
     <div className='container'>
       <ul className='user-list'>
-        {list.map((item) => <ListItem key={item.id} id={item.id} name={item.name} onClick={onClick}/>)}
+        {list.map((item) => <ListItem key={item.id} id={item.id} name={item.name} onClick={(event) => onClick(event)}/>)}
       </ul>
       {id !== 0 && <Details id={id}/>}
     </div>
