@@ -32,7 +32,7 @@ function App() {
 
   function onClick(event: React.MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
-    setId(event.target.id);
+    setId(Number(event.currentTarget.id));
   }
 
   return (
